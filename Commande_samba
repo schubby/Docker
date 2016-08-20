@@ -1,0 +1,12 @@
+Launch samba
+docker run -it --name Samba \
+  -v /home/musique:/home/musique:rw \
+  -v /home/films:/home/films:rw \
+  -v /home/series:/home/series:rw \
+  -p 139:139 \
+  -p 445:445 \
+  -p 137:137 \
+  -d dperson/samba \
+  -s "Smusique;/home/musique;yes;no" \
+  -s "Sfilms;/home/films;yes;no" \
+  -s "Sseries;/home/series;yes;no"
