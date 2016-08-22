@@ -1,17 +1,19 @@
 Lancement Samba
 docker run -it --name Samba \
+  -p 139:139 \
+  -p 445:445 \
+  -p 137:137 \
   -v /home/musique:/home/musique:rw \
   -v /home/films:/home/films:rw \
   -v /home/series:/home/series:rw \
   -v /home/ghost:/home/ghost:rw \
-  -p 139:139 \
-  -p 445:445 \
-  -p 137:137 \
-  -d dperson/samba \
+  -v /home/mangas:/home/mangas:rw \
   -s "Smusique;/home/musique;yes;no" \
   -s "Sfilms;/home/films;yes;no" \
   -s "Sseries;/home/series;yes;no" \
-  -s "Sghost;/home/ghost;yes;no"
+  -s "Sghost;/home/ghost;yes;no" \
+  -s "Smangas;/home/mangas;yes;no" \
+  -d dperson/samba 
   
 #Lancement Transmission
 docker run -it --name transmission -p 9091:9091 \
