@@ -23,3 +23,9 @@ docker run -it --name transmission -p 9091:9091 \
   -v /home/series:/home/series:rw \
   -v /home/musique:/home/musique:rw \
   -d dperson/transmission
+
+#Lancement Subsonic
+docker run --detach \
+  --publish 8080:8080 \
+  --volume "/home/musique:/opt/music/:ro" \
+  cyrilix/subsonic
