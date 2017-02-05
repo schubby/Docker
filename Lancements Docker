@@ -29,3 +29,10 @@ docker run --detach \
   --publish 8080:8080 \
   --volume "/home/musique:/opt/music/:ro" \
   cyrilix/subsonic
+
+docker run --restart=always \                                                                                                                                                          0 < 10:23:57
+    -d --name plex \
+    -h http://schubby.ddns.net \
+    -v /home/PlexConfig:/config \
+    -v /mnt/Maxell:/data \
+    -p 32400:32400 timhaak/plex
