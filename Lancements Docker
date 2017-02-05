@@ -44,8 +44,9 @@ Docker Hub : https://hub.docker.com/r/timonier/webui-aria2/
 installation : docker pull timonier/webui-aria2
 lancement
 docker run \
-    --name aria2 \
+    -d --name aria2 \
     -i \
     -t \
+    -v /mnt/Maxell/downloads:/data \
     -p 9191:9191 \
     timonier/webui-aria2
