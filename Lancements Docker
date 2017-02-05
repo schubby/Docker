@@ -31,9 +31,21 @@ docker run --name subsonic \
   --volume "/home/musique:/opt/music/:ro" \
   cyrilix/subsonic
 
+#Lancement Plex
 docker run --restart=always \                                                                                                                                                          0 < 10:23:57
     -d --name plex \
     -h http://schubby.ddns.net \
     -v /home/PlexConfig:/config \
     -v /mnt/Maxell:/data \
     -p 32400:32400 timhaak/plex
+
+##### Aria2 Webui #####
+Docker Hub : https://hub.docker.com/r/timonier/webui-aria2/
+installation : docker pull timonier/webui-aria2
+lancement
+docker run \
+    --name aria2 \
+    -i \
+    -t \
+    -p 9191:9191 \
+    timonier/webui-aria2
