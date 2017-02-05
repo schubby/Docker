@@ -48,5 +48,5 @@ docker run \
     -i \
     -t \
     -v /mnt/Maxell/downloads:/data \
-    -p 9191:9191 \
+    -p 9191:80 \
     timonier/webui-aria2
