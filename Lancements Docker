@@ -19,7 +19,7 @@ docker run -it --name samba \
 #Lancement Transmission
 docker run -it --name transmission -p 9091:9091 \
   -v /home/app/transmission:/var/lib/transmission-daemon:rw \
-  -v /data:/mnt/Maxell/downloads \
+  -v /mnt/Maxell/downloads:/data \
   -d dperson/transmission
 
 #Lancement Subsonic
