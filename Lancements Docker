@@ -1,5 +1,6 @@
 Lancement Samba
 docker run -it --name samba \
+  --restart=always \
   -v /home/musique:/home/musique:rw \
   -v /home/films:/home/films:rw \
   -v /home/series:/home/series:rw \
@@ -18,12 +19,14 @@ docker run -it --name samba \
   
 #Lancement Transmission
 docker run -it --name transmission -p 9091:9091 \
+  --restart=always \
   -v /home/app/transmission:/var/lib/transmission-daemon:rw \
   -v /mnt/Maxell/downloads:/data \
   -d dperson/transmission
 
 #Lancement Subsonic
 docker run --name subsonic \
+  --restart=always \
   --detach \
   --publish 8080:8080 \
   --volume "/home/musique:/opt/music/:ro" \
