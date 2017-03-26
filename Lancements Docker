@@ -39,6 +39,15 @@ docker run --restart=always \                                                   
     -v /home/PlexConfig:/config \
     -v /mnt/Maxell:/data \
     -p 32400:32400 timhaak/plex
+    
+    
+#### Lancement FTP ####
+docker run -p 11021:21 \
+    -it --rm \
+    -e FTP_USER=root \
+    -e FTP_PASS=@10ns@1SN \
+    -e HOST=schubby.ddns.net \
+    mcreations/openwrt-ftp
 
 ##### Aria2 Webui #####
 Docker Hub : https://hub.docker.com/r/timonier/webui-aria2/
