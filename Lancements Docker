@@ -29,7 +29,7 @@ docker run --name subsonic \
   --restart=always \
   --detach \
   --publish 8080:8080 \
-  --volume "/home/musique:/opt/music/:ro" \
+  --volume "/mnt/Maxell/musique:/opt/music/:ro" \
   cyrilix/subsonic
 
 #Lancement Plex
