@@ -56,7 +56,7 @@ docker run --name openfire -d \
     --publish 5222:5222 \
     --publish 7777:7777 \
     --volume /srv/docker/openfire:/var/lib/openfire \
-    bunnyfu/openfire:4.0.3
+    bunnyfu/openfire
 
 ##### Aria2 Webui #####
 Docker Hub : https://hub.docker.com/r/timonier/webui-aria2/
