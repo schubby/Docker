@@ -49,6 +49,15 @@ docker run -p 11021:21 \
     -e HOST=schubby.ddns.net \
     mcreations/openwrt-ftp
 
+#### Lancement OpenFire ####
+docker run --name openfire -d \
+    --restart=always \
+    --publish 9090:9090 \
+    --publish 5222:5222 \
+    --publish 7777:7777 \
+    --volume /srv/docker/openfire:/var/lib/openfire \
+    bunnyfu/openfire:4.0.3
+
 ##### Aria2 Webui #####
 Docker Hub : https://hub.docker.com/r/timonier/webui-aria2/
 installation : docker pull timonier/webui-aria2
