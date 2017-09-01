@@ -55,6 +55,15 @@ docker run --name openfire -d \
     --publish 9090:9090 \
     --publish 5222:5222 \
     --publish 7777:7777 \
+    --publish 5223:5223 \
+    --publish 7070:7070 \
+    --publish 7443:7443 \
+    --publish 5269:5269 \
+    --publish 5275:5275 \
+    --publish 5276:5276 \
+    --publish 5262:5262 \
+    --publish 5263:5263 \
+    --publish 5229:5229 \
     --volume /srv/docker/openfire:/var/lib/openfire \
     bunnyfu/openfire
 
