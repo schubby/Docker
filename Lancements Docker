@@ -80,11 +80,11 @@ docker run \
     timonier/webui-aria2
     
 #### Lancement Mumble ####
-docker run --name mumble \
+docker run -d --name mumble \
     --restart=always \
-    -d --net=host \
-    -v /path/to/config/mumble-server:/data \
     -p 64738:64738 \
-    -t coppit/mumble-server
+    -p 64738:64738/udp \
+    opiumozor/mumble
+
 
 
