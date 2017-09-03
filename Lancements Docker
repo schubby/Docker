@@ -78,3 +78,12 @@ docker run \
     -v /mnt/Maxell/downloads:/data \
     -p 9191:80 \
     timonier/webui-aria2
+    
+    #### Lancement Mumble ####
+    docker run --name=mumble
+        -d --net=host \
+        -v /path/to/config/mumble-server:/data \
+        -p 64738:64738 \
+        -t coppit/mumble-server
+
+
