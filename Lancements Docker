@@ -81,6 +81,7 @@ docker run \
     
 #### Lancement Mumble ####
 docker run --name=mumble
+    --restart=always \
     -d --net=host \
     -v /path/to/config/mumble-server:/data \
     -p 64738:64738 \
