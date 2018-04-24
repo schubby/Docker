@@ -33,7 +33,7 @@ docker run --name subsonic \
   cyrilix/subsonic
 
 #Lancement Plex
-docker run --restart=always \                                                                                                                                                          0 < 10:23:57
+docker run --restart=always \
     -d --name plex \
     -h http://schubby.ddns.net \
     -v /home/PlexConfig:/config \
