@@ -1,3 +1,18 @@
+Lancement Jellyfin
+docker run -d \
+ --name jellyfin \
+ --user root:root \
+ --net=host \
+ --volume /home/jellyfin/config:/config \
+ --volume /home/jellyfin/cache:/cache \
+ --mount type=bind,source=/mnt/maxell,target=/maxell \
+ --mount type=bind,source=/mnt/wdblack,target=/wdblack \
+ --restart=unless-stopped \
+ --device /dev/dri/renderD128:/dev/dri/renderD128 \
+ --device /dev/dri/card0:/dev/dri/card0 \
+ jellyfin/jellyfin
+
+
 Lancement Samba
 docker run -it --name samba \
   --restart=always \
